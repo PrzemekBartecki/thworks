@@ -1,0 +1,20 @@
+/* colors */
+
+$white: #fff;
+
+
+%flex-centerY {
+    display: flex;
+    align-items: center;
+  }
+  
+  %flex-centerX {
+    display: flex;
+    justify-content: center;
+  }
+  
+  %flex-centerXY {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

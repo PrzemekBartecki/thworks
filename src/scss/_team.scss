@@ -1,0 +1,95 @@
+.team {
+    scroll-margin-top: 70px;
+
+    margin: 40px auto 116px;
+
+    &__title {
+        color: #1C1F83;
+
+    }
+
+    &__items {
+        @extend %flex-centerY;
+        justify-content: space-between;
+        max-width: 1168px;
+        width: 100%;
+        margin: 40px auto;
+
+        .item {
+            max-width: 270px;
+            width: 100%;
+            min-height: 378px;
+            @extend %flex-centerY;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            @media only screen and (max-width: 1024px) {
+                    max-width: 32%;
+            }
+
+
+
+            >img {
+                max-width: 131px;
+                margin-top: 3px;
+
+                @media only screen and (max-width: 480px) {
+                    max-width: 115px;
+                }
+            }
+
+            .person a {
+                font: 24px / 34px "Sen";
+                color: #38A5DB;
+            }
+
+            .office {
+                font: 13px / 18px "Open Sans";
+                color: rgba(#011226, 0.5);
+            }
+
+            .depiction {
+                font: 18px / 24px "Sen";
+                color: #45515F;
+                padding: 0 5px;
+
+                @media only screen and (max-width: 480px) {
+                    font: 12px / 18px "Sen";
+                }
+            }
+        }
+    }
+
+    &__social-icons {
+        @extend %flex-centerY;
+        justify-content: space-between;
+        width: 92px;
+
+        .social-icon {
+            border: 1px solid rgba(#7F8B98, 0.3);
+            border-radius: 3px;
+            width: 43px;
+            height: 23px;
+            @extend %flex-centerXY;
+        }
+    }
+
+    /*SLIDER*/
+
+    .slick-slider {
+
+        .slick-dots {
+            bottom: -76px;
+
+            li button:before {
+                font-size: 8px;
+            }
+
+            li.slick-active button:before {
+                color: #4250BF;
+                opacity: 1;
+            }
+        }
+    }
+
+}

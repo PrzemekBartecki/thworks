@@ -1,0 +1,68 @@
+.menu {
+
+    max-width: 144rem;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+    @extend %flex-centerY;
+
+
+
+    nav {
+        @extend %flex-centerY;
+        justify-content: space-between;
+        padding: 0 9.44vw;
+        width: 100%;
+
+        @media only screen and (min-width: 1441px) {
+            padding: 0 136px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            padding: 0 16px;
+         }
+    }
+
+    &__logo-brand {
+
+        @media only screen and (max-width: 480px) {
+            max-width: 56px;
+         }
+    }
+
+    &__items{
+        @extend %flex-centerY;
+        justify-content: space-between;
+        width: 217px;
+
+        @media only screen and (max-width: 480px) {
+            width: 183px;
+         }
+
+
+        p {
+            line-height: 19px;
+            position: relative;
+
+            a {
+                color: #1C2085;
+                &:after{
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background-color: #5454D4;
+                    bottom: -6px;
+                }
+
+                &:hover:after{
+                    display: block;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+}

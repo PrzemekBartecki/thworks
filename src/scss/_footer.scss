@@ -1,0 +1,114 @@
+footer {
+    background: linear-gradient(180deg, #FAFBFF 0%, #EFF1F9 41.68%, #E9ECF6 49.59%, #CED3E8 93.91%);
+    width: 100%;
+    padding: 40px 16px 44px;
+
+    @media only screen and (max-width: 630px) {
+        background: unset;
+        padding: unset;
+    }
+
+    .footer__one {
+        margin: 0 auto;
+        max-width: 1168px;
+        width: 100%;
+        @extend %flex-centerY;
+        justify-content: space-between;
+
+
+
+         .menu__logo-brand {
+            @media only screen and (max-width: 630px) {
+                align-self: flex-start;
+             }
+         }
+
+        &-mail {
+            p {
+                font: 16px/19.25px "Sen";
+                color: #263396;
+                text-align: center;
+                letter-spacing: 0.32px;
+                margin-bottom: 16px;
+            }
+
+            a {
+                font: 20px/24px "Sen";
+                color: #0F81FF;
+                text-align: center;
+                letter-spacing: 0.4px;
+                text-decoration-line: underline;
+            }
+
+            @media only screen and (max-width: 630px) {
+                margin-top: 16px;
+             }
+        }
+        button {
+            color: $white;
+            background: #38A5DB;
+            box-shadow: 0px 12px 44px rgba(56, 165, 219, 0.6);
+            border-radius: 23px;
+            width: 220px;
+            height: 46px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font: 16px / 22px "Open Sans";
+            font-weight: 600;
+
+        }
+
+        @media only screen and (max-width: 630px) {
+            flex-direction: column;
+            background: linear-gradient(180deg, #FAFBFF 0%, #EFF1F9 41.68%, #E9ECF6 49.59%, #CED3E8 93.91%);
+            padding: 40px 16px 32px;
+
+            
+            button {
+                margin-top: 40px;
+            }
+
+         }
+    }
+
+    .footer__two {
+        @extend %flex-centerX;
+        margin: 60px auto 0;
+
+        p, a {
+            width: 200px;
+            color: #45515F;
+            text-align: center;
+            font: 18px / 24px "Sen";
+            position: relative;
+        }
+
+         a::before {
+            content: '';
+            display: block;
+            width: 3px;
+            height: 22px;
+            background-color: #9CA4C7;
+            position: absolute;
+        }
+
+        @media only screen and (max-width: 630px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            height: 99px;
+            margin: unset;
+            padding: 16px 16px 20px;
+            p,a {
+                width: 50%;
+                font-size: 12px;
+            }
+
+            a::before {
+                content: unset;
+            }
+         }
+    }
+
+}

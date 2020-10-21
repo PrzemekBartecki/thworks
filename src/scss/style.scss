@@ -1,0 +1,222 @@
+//variable
+@import "variables";
+
+//reset, normalize, helper-class
+@import "partials/normalize";
+
+@import "menu";
+@import "header";
+@import "team";
+@import "contact";
+@import "footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Sen', sans-serif;
+    font-size: 10px;
+}
+
+@media (min-width:1900px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 144rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: $white;
+    font: 4rem / 5.6rem "Sen";
+    letter-spacing: 0.2px;
+    font-weight: bold;
+
+    @media only screen and (max-width: 480px) {
+        font: 2.4rem / 3.2rem "Sen";
+     }
+}
+
+h2 {
+    color: $white;
+    font: 1.6rem / 3.4rem "Sen";
+    text-align: center;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 51vh;
+    right: 7vw;
+    z-index: 3;
+
+    a {
+        margin-bottom: 12px;
+    }
+}
+
+/*Formularz*/
+.form {
+    margin-top: 42px;
+
+    .form__title {
+        font: 18px/26px "Sen";
+        opacity: 0.7;
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: 480px) {
+            font: 1.4rem / 2.6rem "Sen";
+         }
+    }
+
+    form {
+
+
+        input {
+            border-radius: 25px;
+            max-width: 515px;
+            width: 100%;
+            height: 46px;
+            border: none;
+            outline: none;
+            padding: 12px 20px;
+            color: #576677;
+        }
+
+        ::placeholder {
+            font-size: 17px;
+            line-height: 20px;
+            color: #576677;
+        }
+
+        button {
+            color: $white;
+            background: #38A5DB;
+            border-radius: 25px;
+            width: 154px;
+            height: 46px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            @media only screen and (max-width: 480px) {
+                width: 100%;
+              }
+        }
+    }
+}
+
+
+/*POPUP*/
+.overlay {
+    position: fixed;
+   // display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(#252B42, 0.5);
+    transition: opacity 500ms;
+     visibility: hidden;
+    opacity: 0;
+    padding: 0 5%;
+}
+
+.overlay:target {
+      visibility: visible;
+    opacity: 1;
+   // display: block;
+    z-index: 99;
+}
+
+.popup {
+    background: #fff;
+    border-radius: 5px;
+    max-width: 630px;
+    max-height: 95vh;
+    position: relative;
+    transition: all 5s ease-in-out;
+    box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 30px 40px 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .person {
+        font: 40px / 34px "Sen";
+        color: #38A5DB;
+        margin: 40px auto 25px;
+        letter-spacing: unset;
+        text-align: center;
+
+        @media only screen and (max-width: 480px) {
+            font-size: 24px;
+          }
+    }
+
+    .office {
+        font: 13px / 18px "Open Sans";
+        color: rgba(#011226, 0.5);
+        letter-spacing: 0.26px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .close {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+
+        @media only screen and (max-width: 480px) {
+            top: 24px;
+            right: 24px;
+          }
+       img {
+            width: 24px;
+       }
+    }
+
+    .content {
+        max-width: 570px;
+        width: 100%;
+        max-height: 55vh;
+        overflow: auto;
+        font: 18px/24px "Sen";
+        color: #45515F;
+
+        @media only screen and (max-width: 480px) {
+            font: 13px/18px "Sen";
+          }
+
+    }
+}
