@@ -1,5 +1,4 @@
 .menu {
-
     max-width: 144rem;
     width: 100%;
     height: 70px;
@@ -8,8 +7,6 @@
     z-index: 99;
     background-color: white;
     @extend %flex-centerY;
-
-
 
     nav {
         @extend %flex-centerY;
@@ -42,7 +39,6 @@
             width: 183px;
          }
 
-
         p {
             line-height: 19px;
             position: relative;
@@ -64,5 +60,4 @@
             }
         }
     }
-
 }

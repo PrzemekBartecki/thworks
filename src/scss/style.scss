@@ -83,6 +83,12 @@ h2 {
     a {
         margin-bottom: 12px;
     }
+
+    @media only screen and (max-width: 480px) {
+       img {
+           width: 30px;
+       }
+     }
 }
 
 /*Formularz*/
